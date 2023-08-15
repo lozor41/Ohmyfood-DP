@@ -1,0 +1,22 @@
+{
+  "name": "projet4",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./assets/style.css --style expanded"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lozor41/Ohmyfood-DP.git"
+  },
+  "author": "pierred",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lozor41/Ohmyfood-DP/issues"
+  },
+  "homepage": "https://github.com/lozor41/Ohmyfood-DP#readme",
+  "devDependencies": {
+    "sass": "^1.65.1"
+  }
+}
