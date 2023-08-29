@@ -3,6 +3,7 @@ $greyBG: #F7F7F7;
 $greyDarker: #7E7E7E;
 $white: white;
 
+
 :root {
   --button-gradient: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
   --main-bg-color: #f6f6f6;
@@ -18,7 +19,7 @@ $white: white;
   height: 100%;
   align-items: center;
   justify-content: center;
-  background-color: #f6f6f6;
+  background-color: $white;
   z-index: 9999;
   opacity: 1;
   transition-property: opacity;
@@ -112,10 +113,11 @@ header {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 
-  .logo {
-    width: 40%;
-    margin: 20px;
+  h1 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 40px;
   }
+
 }
 
 body {
@@ -127,6 +129,7 @@ body {
 
 .locate {
   display: flex;
+  flex-direction: row;
   background-color: var(--locate-bg-color);
   width: 100%;
   justify-content: center;
@@ -227,7 +230,7 @@ h2 {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
     font-weight: 500;
     font-size: 16px;
-    font-family: 'Roboto', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin-bottom: 30px;
 
     &:hover {
@@ -265,12 +268,12 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-left: 15px;
   padding-bottom: 60px;
   background-color: var(--main-bg-color);
 
   a {
     text-decoration: none;
+    width: 100%;
   }
 
 
@@ -278,7 +281,8 @@ h2 {
     display: flex;
     position: relative;
     flex-direction: column;
-    width: 90%;
+    width: 95%;
+    margin-left: 20px;
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
@@ -301,47 +305,56 @@ h2 {
       background-color: #99E2D0;
     }
 
+    @keyframes Heart {}
+
     .heart {
       display: flex;
       flex-direction: row-reverse;
       padding-right: 15px;
       margin-top: -35px;
+      animation: HeartAnim 1.5s ease-in-out 0 1;
 
       i {
         position: absolute;
       }
 
+      .empty {
+        color: $greyDarker;
+      }
+
       .full {
         opacity: 0;
-
+        color: transparent;
+        background-image: var(--button-gradient);
+        background-clip: text;
+        -webkit-background-clip: text;
+        transition: all 400ms ease-in-out;
         &:hover {
           opacity: 1;
         }
       }
 
     }
-
-
-
-
-  }
-
-  p {
-    color: #000;
-    display: flex;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    flex-direction: column;
-    font-size: 18px;
-    margin-left: 10px;
-  }
-
-  img {
-    border-radius: 15px 15px 0px 0px;
-    object-fit: cover;
-    height: 200px;
-    width: 100%;
   }
 }
+
+
+p {
+  color: #000;
+  display: flex;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  flex-direction: column;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+img {
+  border-radius: 15px 15px 0px 0px;
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+}
+
 
 
 footer {
@@ -352,12 +365,15 @@ footer {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background-color: var(--footer-bg-color);
 
-  img {
-    margin-top: 20px;
-    margin-bottom: 20px;
+  p {
+    color: $white;
+    font-family: 'Shrikhand', cursive;
+    font-size: 20px;
     margin-left: 10px;
-    width: 137px;
-    height: 27px;
+  }
+
+  .desktop {
+    display: none;
   }
 
   a {
@@ -378,6 +394,11 @@ footer {
 }
 
 @media (min-width: 767.98px) {
+  body {
+    display: flex;
+    margin: auto;
+  }
+
   .fonction {
     flex-direction: row;
     flex-wrap: wrap;
@@ -402,14 +423,34 @@ footer {
   }
 
   .resto {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
     article {
-      width: 485px;
+      width: 95%;
     }
   }
 
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    a {
+      margin-bottom: 20px;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .mobile {
+      display: none;
+    }
+
+    .desktop {
+      opacity: 1;
+      display: flex;
+      margin-left: 50px;
+    }
+  }
 }
