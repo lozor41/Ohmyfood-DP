@@ -1,3 +1,8 @@
+$pointColor: #9356DC;
+$greyBG: #F7F7F7;
+$greyDarker: #7E7E7E;
+$white: white;
+
 :root {
   --button-gradient: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
   --main-bg-color: #f6f6f6;
@@ -31,6 +36,7 @@
     100% {
       opacity: 0;
       display: none;
+      transform: scale(0);
     }
   }
 
@@ -198,62 +204,61 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
-  padding-bottom: 45px;
+  justify-content: center;
 
-  article {
-    display: flex;
+  h2 {
+    width: 100%;
+    padding-left: 40px;
+    line-height: 28px;
+  }
+
+  button {
     position: relative;
-    justify-content: center;
-    align-items: center;
     width: 90%;
-  }
-
-  a {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    color: #000;
-    padding-left: 10px;
-    margin-left: -10px;
-    width: 90%;
-    text-decoration: none;
-  }
-
-  p {
+    text-align: center;
     display: flex;
-    position: inherit;
+    align-items: center;
     justify-content: center;
-    color: #fff;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 72.38px;
+    background-color: $greyBG;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
     font-weight: 500;
-    margin-left: -5px;
-    width: 24px;
-    height: 24px;
-    background-color: #9356DC;
-    border-radius: 25px;
-  }
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 30px;
 
-  i {
-    position: absolute;
-    padding-left: 12px;
-  .full {
-    opacity: 0;
     &:hover {
-      opacity: 1;
+      i {
+        color: $pointColor;
+      }
     }
-  }
-}
-}
 
-.btnfctn {
-  display: flex;
-  height: 72px;
-  width: 20%;
-  align-items: center;
-  border-radius: 20px;
-  background: var(--main-bg-color);
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    span {
+      width: 24px;
+      height: 24px;
+      background-color: $pointColor;
+      color: $white;
+      font-size: 14.18px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      left: -12px;
+    }
+
+    i {
+      color: $greyDarker;
+      font-size: 19.9px;
+      position: absolute;
+      left: 8%;
+    }
+
+  }
+
 }
 
 .resto {
@@ -301,19 +306,24 @@ h2 {
       flex-direction: row-reverse;
       padding-right: 15px;
       margin-top: -35px;
-    }
 
-    i {
-      position: absolute;
-    }
-
-    .full {
-      opacity: 0;
-
-      &:hover {
-        opacity: 1;
+      i {
+        position: absolute;
       }
+
+      .full {
+        opacity: 0;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
     }
+
+
+
+
   }
 
   p {
@@ -367,23 +377,39 @@ footer {
   }
 }
 
-@media (min-width: 767.98px)
-{
+@media (min-width: 767.98px) {
   .fonction {
-    display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1440px;
+    width: 100%;
+
+    h2 {
+      margin-left: 2.5%;
+      padding-left: 0;
+    }
+
+    button {
+      width: 28%;
+      padding-left: 5%;
+      padding-right: 5%;
+
+      i {
+        left: 7%;
+      }
+    }
   }
-  
-}
-@media (min-width: 1024px)
-{
+
   .resto {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+
     article {
-     width: 485px;
+      width: 485px;
     }
   }
+
 }
