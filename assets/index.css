@@ -6,6 +6,80 @@
   --point-color: #9356DC;
 }
 
+.modal {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: #f6f6f6;
+  z-index: 9999;
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 4s;
+  transition-delay: 4s;
+  animation: fadeOut 2.5s ease-in 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+.modal .loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  position: relative;
+  animation: rotate 1s linear infinite;
+}
+.modal .loader::before,
+.modal .loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0px;
+  border-radius: 50%;
+  border: 5px solid #99E2D0;
+  animation: LoaderStyle 2s linear infinite;
+}
+.modal .loader::after {
+  border-color: var(--point-color);
+  animation: LoaderStyle 2s linear infinite, rotate 0.5s linear infinite reverse;
+  inset: 6px;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes LoaderStyle {
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+  }
+  25% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+  }
+  50% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+  }
+  75% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -80,10 +154,13 @@ body {
   color: #fff;
   font-size: 16px;
   font-weight: 500;
-  transition-property: opacity;
-  transition-duration: 300ms;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+  transition-property: opacity, transform, box-shadow;
+  transition-duration: 400ms;
 }
 .button_exp:hover {
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+  transform: scale(1.15);
   opacity: 70%;
 }
 
@@ -115,7 +192,6 @@ h2 {
   color: #000;
   padding-left: 10px;
   margin-left: -10px;
-  gap: 14px;
   width: 90%;
   text-decoration: none;
 }
@@ -132,8 +208,15 @@ h2 {
   background-color: #9356DC;
   border-radius: 25px;
 }
-.fonction img {
+.fonction i {
+  position: absolute;
   padding-left: 12px;
+}
+.fonction i .full {
+  opacity: 0;
+}
+.fonction i .full:hover {
+  opacity: 1;
 }
 
 .btnfctn {
@@ -150,6 +233,7 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  margin-left: 15px;
   padding-bottom: 60px;
   background-color: var(--main-bg-color);
 }
@@ -161,20 +245,21 @@ h2 {
   position: relative;
   flex-direction: column;
   width: 90%;
-  margin-left: 25px;
   background-color: #fff;
   border-radius: 15px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  font-size: xx-large;
 }
 .resto article .new {
   display: flex;
-  text-align: center;
   justify-content: center;
+  align-items: center;
   position: absolute;
-  margin-left: 250px;
   border-radius: 2px;
-  width: 20%;
-  height: 10%;
+  width: 80px;
+  height: 25px;
+  right: 15px;
+  top: 15px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 14px;
   font-weight: 500;
@@ -187,25 +272,16 @@ h2 {
   padding-right: 15px;
   margin-top: -35px;
 }
-.resto article .like {
+.resto article i {
   position: absolute;
-  border-radius: 0%;
-  width: 22px;
-  height: 21px;
 }
-.resto article .likefull {
-  position: absolute;
-  border-radius: 0%;
-  width: 22px;
-  height: 21px;
+.resto article .full {
   opacity: 0;
-  transition-property: all;
-  transition-duration: 400ms;
 }
-.resto article .likefull:active {
+.resto article .full:hover {
   opacity: 1;
 }
-.resto article p {
+.resto p {
   color: #000;
   display: flex;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -213,7 +289,7 @@ h2 {
   font-size: 18px;
   margin-left: 10px;
 }
-.resto article img {
+.resto img {
   border-radius: 15px 15px 0px 0px;
   object-fit: cover;
   height: 200px;
@@ -248,6 +324,24 @@ footer .vector {
   margin-left: 0px;
   width: 12px;
   height: 13px;
+}
+
+@media (min-width: 767.98px) {
+  .fonction {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media (min-width: 1024px) {
+  .resto {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .resto article {
+    width: 485px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
