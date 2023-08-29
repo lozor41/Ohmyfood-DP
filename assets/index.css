@@ -46,12 +46,12 @@
   position: absolute;
   inset: 0px;
   border-radius: 50%;
-  border: 5px solid var(--point-color);
-  animation: prixClipFix 2s linear infinite;
+  border: 5px solid #99E2D0;
+  animation: LoaderStyle 2s linear infinite;
 }
 .modal .loader::after {
-  border-color: #008766;
-  animation: prixClipFix 2s linear infinite, rotate 0.5s linear infinite reverse;
+  border-color: var(--point-color);
+  animation: LoaderStyle 2s linear infinite, rotate 0.5s linear infinite reverse;
   inset: 6px;
 }
 @keyframes rotate {
@@ -62,7 +62,7 @@
     transform: rotate(360deg);
   }
 }
-@keyframes prixClipFix {
+@keyframes LoaderStyle {
   0% {
     clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
   }
@@ -192,7 +192,6 @@ h2 {
   color: #000;
   padding-left: 10px;
   margin-left: -10px;
-  gap: 14px;
   width: 90%;
   text-decoration: none;
 }
@@ -209,8 +208,15 @@ h2 {
   background-color: #9356DC;
   border-radius: 25px;
 }
-.fonction img {
+.fonction i {
+  position: absolute;
   padding-left: 12px;
+}
+.fonction i .full {
+  opacity: 0;
+}
+.fonction i .full:hover {
+  opacity: 1;
 }
 
 .btnfctn {
@@ -227,6 +233,7 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  margin-left: 15px;
   padding-bottom: 60px;
   background-color: var(--main-bg-color);
 }
@@ -238,10 +245,10 @@ h2 {
   position: relative;
   flex-direction: column;
   width: 90%;
-  margin-left: 25px;
   background-color: #fff;
   border-radius: 15px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  font-size: xx-large;
 }
 .resto article .new {
   display: flex;
@@ -317,6 +324,24 @@ footer .vector {
   margin-left: 0px;
   width: 12px;
   height: 13px;
+}
+
+@media (min-width: 767.98px) {
+  .fonction {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media (min-width: 1024px) {
+  .resto {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .resto article {
+    width: 485px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
