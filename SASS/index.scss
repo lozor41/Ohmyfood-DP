@@ -124,7 +124,6 @@ body {
   display: flex;
   max-width: 1440px;
   flex-direction: column;
-  margin: 0px;
 }
 
 .locate {
@@ -305,8 +304,6 @@ h2 {
       background-color: #99E2D0;
     }
 
-    @keyframes Heart {}
-
     .heart {
       display: flex;
       flex-direction: row-reverse;
@@ -382,14 +379,6 @@ footer {
     margin-left: 10px;
     font-size: 16px;
     font-weight: 500;
-  }
-
-  .vector {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    width: 12px;
-    height: 13px;
   }
 }
 
