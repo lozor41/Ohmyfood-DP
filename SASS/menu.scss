@@ -133,6 +133,7 @@ section {
       left: 10px;
       border-radius: 0px 15px 15px 0px;
       transition: 700ms ease-in-out;
+      transition-duration: 700ms;
       cursor: pointer;
       &:hover {
         opacity: 1;
