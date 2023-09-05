@@ -262,7 +262,6 @@ h2 {
   color: #008766;
   background-color: #99E2D0;
 }
-@keyframes Heart {}
 .resto article .heart {
   display: flex;
   flex-direction: row-reverse;
@@ -327,13 +326,6 @@ footer a {
   margin-left: 10px;
   font-size: 16px;
   font-weight: 500;
-}
-footer .vector {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  width: 12px;
-  height: 13px;
 }
 
 @media (min-width: 767.98px) {
