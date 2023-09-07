@@ -102,6 +102,8 @@ $white: white;
   }
 }
 
+
+
 header {
   display: flex;
   flex-direction: column;
@@ -123,7 +125,6 @@ header {
 
 body {
   display: flex;
-  max-width: 1440px;
   flex-direction: column;
 }
 
@@ -194,9 +195,10 @@ body {
   }
 }
 
-h2 {
+h4 {
   font-family: 'Roboto';
   font-weight: 700;
+  font-size: 26px;
   margin-left: 25px;
 }
 
@@ -208,7 +210,7 @@ h2 {
   align-items: center;
   justify-content: center;
 
-  h2 {
+  h4 {
     width: 100%;
     padding-left: 40px;
     line-height: 28px;
@@ -238,11 +240,12 @@ h2 {
       }
     }
 
-    span {
+    .badge {
       width: 24px;
       height: 24px;
       background-color: $pointColor;
       color: $white;
+      z-index: 9998;
       font-size: 14.18px;
       border-radius: 50%;
       display: flex;
@@ -262,14 +265,15 @@ h2 {
   }
 
 }
-
+.backresto {
+  background-color: var(--main-bg-color);
+}
 .resto {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
   padding-bottom: 60px;
   background-color: var(--main-bg-color);
-
   a {
     text-decoration: none;
     width: 100%;
@@ -392,10 +396,10 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    max-width: 1440px;
-    width: 100%;
+    width: 86%;
+    margin-left: 120px;
 
-    h2 {
+    h4 {
       margin-left: 2.5%;
       padding-left: 0;
     }
@@ -411,14 +415,22 @@ footer {
     }
   }
 
+  .backresto {
+    h4 {
+      padding-top: 2%;
+      margin-left: 10%;
+    }
   .resto {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin-left: 120px;
+    margin-right: 120px;
 
     article {
       width: 95%;
     }
   }
+}
 
   footer {
     display: flex;

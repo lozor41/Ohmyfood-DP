@@ -39,9 +39,8 @@ header {
   }
 }
 
-body {
+.menubody {
   display: flex;
-  max-width: 1440px;
   flex-direction: column;
   margin: 0px;
 }
@@ -52,7 +51,7 @@ img {
   max-height: 275px;
 }
 
-section {
+.menu {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -130,7 +129,7 @@ section {
       margin-right: 80px;
     }
 
-    .content {
+    .contentmenu {
       display: flex;
       flex-direction: column;
       width: 100%;
@@ -261,12 +260,12 @@ footer {
 //* tel version *///
 
 @media (min-width: 767.98px) {
-  body {
+  .menubody {
     display: flex;
     margin: auto;
   }
 
-  section {
+  .menu {
     display: flex;
     width: 70%;
     align-self: center;
