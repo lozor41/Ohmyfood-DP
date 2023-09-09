@@ -143,16 +143,14 @@ img {
       background-color: #99e2d0;
       color: #fff;
       font-size: 28px;
-      padding: 22.5px 20px;
+      padding: 24.5px 30px;
       border-radius: 0 15px 15px 0;
-      right: -32px;
-      transform: translateX(60px);
-  }
-
-  .menuvalid {
-    color: #fff;
-    border-radius: 15px;
-    border-width: 4px;
+      right: -52px;
+      transform: translateX(40px);
+      .menuvalid {
+        color: #fff;
+        font-size: x-large;
+      }
   }
 }
 }
@@ -202,7 +200,7 @@ img {
 .heart {
   display: flex;
   align-items: center;
-  padding-left: 20px;
+  padding-left: 10px;
   cursor: pointer;
 
   i {
