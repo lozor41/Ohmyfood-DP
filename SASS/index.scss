@@ -212,8 +212,6 @@ h4 {
 
   h4 {
     width: 100%;
-    padding-left: 40px;
-    line-height: 28px;
   }
 
   button {
@@ -223,7 +221,7 @@ h4 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 72.38px;
+    height: 72px;
     background-color: $greyBG;
     border-radius: 20px;
     border: none;
@@ -265,15 +263,19 @@ h4 {
   }
 
 }
+
 .backresto {
+  padding-top: 1px;
   background-color: var(--main-bg-color);
 }
+
 .resto {
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding-bottom: 60px;
   background-color: var(--main-bg-color);
+
   a {
     text-decoration: none;
     width: 100%;
@@ -313,7 +315,7 @@ h4 {
       flex-direction: row-reverse;
       padding-right: 15px;
       margin-top: -35px;
-      animation: HeartAnim 1.5s ease-in-out 0 1;
+      align-items: flex-start;
 
       i {
         position: absolute;
@@ -330,6 +332,7 @@ h4 {
         background-clip: text;
         -webkit-background-clip: text;
         transition: all 400ms ease-in-out;
+
         &:hover {
           opacity: 1;
         }
@@ -416,18 +419,19 @@ footer {
   }
 
   .backresto {
+    padding-top: 1px;
     padding-left: 120px;
 
-  .resto {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-right: 120px;
+    .resto {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-right: 120px;
 
-    article {
-      width: 95%;
+      article {
+        width: 95%;
+      }
     }
   }
-}
 
   footer {
     display: flex;
