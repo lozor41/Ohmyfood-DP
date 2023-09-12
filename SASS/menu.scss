@@ -61,11 +61,6 @@ header {
   border-radius: 35px 35px 0px 0px;
   background-color: #F6F6F6;
 
-  .menuform {
-    display: flex;
-    flex-direction: column;
-  }
-
   h1 {
     display: flex;
     align-items: center;
@@ -75,6 +70,22 @@ header {
     justify-content: center;
     margin-top: 50px;
   }
+
+  .menuform {
+    display: flex;
+    flex-direction: column;
+    
+
+    @keyframes appaear {
+      0% {
+        transform: translateX(-200px);
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
 
   h2 {
     font-size: 16px;
@@ -105,6 +116,73 @@ header {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
     overflow: hidden;
     white-space: nowrap;
+  
+  }
+  .entrée1 {
+    animation-name: appaear;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+  }
+  .entrée2 {
+    animation-name: appaear;
+    animation-duration: 1.2s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+  }
+  .entrée3 {
+    animation-name: appaear;
+    animation-duration: 1.4s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+  }
+  .entrée4 {
+    animation-name: appaear;
+    animation-duration: 1.6s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+  }
+  .plats1 {
+    animation-name: appaear;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+  }
+  .plats2 {
+    animation-name: appaear;
+    animation-duration: 2.2s;
+    animation-delay: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+  }
+  .plats3 {
+    animation-name: appaear;
+    animation-duration: 2.4s;
+    animation-delay: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+  }
+  .desserts1 {
+    animation-name: appaear;
+    animation-duration: 2.8s;
+    animation-delay: 2s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+  }
+  .desserts2 {
+    animation-name: appaear;
+    animation-duration: 3.2s;
+    animation-delay: 2s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+  }
+  .desserts3 {
+    animation-name: appaear;
+    animation-duration: 3.6s;
+    animation-delay: 2s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
   }
 
   p {
@@ -132,17 +210,18 @@ header {
     animation: push 500ms ease-in-out both;
 
     &:hover {
-      margin-right: 80px;
+      margin-right: 90px;
     }
 
     .contentmenu {
       display: flex;
       flex-direction: column;
-      width: 100%;
+      width: 90%;
     }
 
     .price {
       display: flex;
+      margin-top: 26px;
     }
 
     .valid {
@@ -153,14 +232,15 @@ header {
       padding: 24.5px 30px;
       border-radius: 0 15px 15px 0;
       right: -52px;
-      transform: translateX(40px);
+      transform: translateX(50px);
 
       .menuvalid {
         color: #fff;
-        font-size: x-large;
+        font-size: xx-large;
       }
     }
   }
+}
 }
 
 @keyframes push {
@@ -277,6 +357,12 @@ footer {
     display: flex;
     width: 70%;
     align-self: center;
+
+    .menuform {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+    }
 
     h2 {
       position: relative;

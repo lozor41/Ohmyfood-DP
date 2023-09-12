@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --button-gradient: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
   --main-bg-color: #f6f6f6;
@@ -292,7 +293,7 @@ h4 {
   opacity: 1;
 }
 
-p {
+.indexp {
   color: #000;
   display: flex;
   font-family: "Roboto";
@@ -443,10 +444,6 @@ header h1 i {
   border-radius: 35px 35px 0px 0px;
   background-color: #F6F6F6;
 }
-.menu .menuform {
-  display: flex;
-  flex-direction: column;
-}
 .menu h1 {
   display: flex;
   align-items: center;
@@ -456,7 +453,21 @@ header h1 i {
   justify-content: center;
   margin-top: 50px;
 }
-.menu h2 {
+.menu .menuform {
+  display: flex;
+  flex-direction: column;
+}
+@keyframes appaear {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.menu .menuform h2 {
   font-size: 16px;
   font-weight: 300;
   font-family: "Roboto";
@@ -465,7 +476,7 @@ header h1 i {
   width: 40px;
   margin-left: 10px;
 }
-.menu h3 {
+.menu .menuform h3 {
   display: block;
   font-size: 18px;
   font-weight: 500;
@@ -473,7 +484,7 @@ header h1 i {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu article {
+.menu .menuform article {
   font-family: "Roboto";
   background-color: white;
   border-radius: 15px;
@@ -484,21 +495,87 @@ header h1 i {
   overflow: hidden;
   white-space: nowrap;
 }
-.menu p {
+.menu .menuform .entrée1 {
+  animation-name: appaear;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+.menu .menuform .entrée2 {
+  animation-name: appaear;
+  animation-duration: 1.2s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+.menu .menuform .entrée3 {
+  animation-name: appaear;
+  animation-duration: 1.4s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+.menu .menuform .entrée4 {
+  animation-name: appaear;
+  animation-duration: 1.6s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+.menu .menuform .plats1 {
+  animation-name: appaear;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+.menu .menuform .plats2 {
+  animation-name: appaear;
+  animation-duration: 2.2s;
+  animation-delay: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+.menu .menuform .plats3 {
+  animation-name: appaear;
+  animation-duration: 2.4s;
+  animation-delay: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+.menu .menuform .desserts1 {
+  animation-name: appaear;
+  animation-duration: 2.8s;
+  animation-delay: 2s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+.menu .menuform .desserts2 {
+  animation-name: appaear;
+  animation-duration: 3.2s;
+  animation-delay: 2s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+.menu .menuform .desserts3 {
+  animation-name: appaear;
+  animation-duration: 3.6s;
+  animation-delay: 2s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+.menu .menuform p {
   display: block;
   justify-content: space-between;
   margin-top: -15px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu span {
+.menu .menuform span {
   font-size: 15px;
   font-weight: 700;
   margin-right: 10px;
   font-family: "Roboto";
   z-index: 9999;
 }
-.menu .card {
+.menu .menuform .card {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -506,18 +583,19 @@ header h1 i {
   transition: 500ms ease-in-out;
   animation: push 500ms ease-in-out both;
 }
-.menu .card:hover {
-  margin-right: 80px;
+.menu .menuform .card:hover {
+  margin-right: 90px;
 }
-.menu .card .contentmenu {
+.menu .menuform .card .contentmenu {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
 }
-.menu .card .price {
+.menu .menuform .card .price {
   display: flex;
+  margin-top: 26px;
 }
-.menu .card .valid {
+.menu .menuform .card .valid {
   position: absolute;
   background-color: #99e2d0;
   color: #fff;
@@ -525,11 +603,11 @@ header h1 i {
   padding: 24.5px 30px;
   border-radius: 0 15px 15px 0;
   right: -52px;
-  transform: translateX(40px);
+  transform: translateX(50px);
 }
-.menu .card .valid .menuvalid {
+.menu .menuform .card .valid .menuvalid {
   color: #fff;
-  font-size: x-large;
+  font-size: xx-large;
 }
 
 @keyframes push {
@@ -629,6 +707,11 @@ footer a {
     display: flex;
     width: 70%;
     align-self: center;
+  }
+  .menu .menuform {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
   }
   .menu h2 {
     position: relative;
