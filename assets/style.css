@@ -181,7 +181,7 @@ h4 {
   justify-content: center;
 }
 .fonction h4 {
-  width: 100%;
+  width: 97%;
 }
 .fonction button {
   position: relative;
@@ -343,7 +343,7 @@ footer a {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: 86%;
+    width: 84%;
     margin-left: 120px;
   }
   .fonction h4 {
