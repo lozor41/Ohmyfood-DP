@@ -61,7 +61,7 @@ header {
   border-radius: 35px 35px 0px 0px;
   background-color: #F6F6F6;
 
-  h1 {
+  h2 {
     display: flex;
     align-items: center;
     font-family: 'Shrikhand', cursive;
@@ -87,7 +87,7 @@ header {
       }
     }
 
-  h2 {
+  h3 {
     font-size: 16px;
     font-weight: 300;
     font-family: 'Roboto';
@@ -97,13 +97,14 @@ header {
     margin-left: 10px;
   }
 
-  h3 {
+  h4 {
     display: block;
     font-size: 18px;
     font-weight: 500;
     font-family: 'Roboto';
     overflow: hidden;
     text-overflow: ellipsis;
+    margin-left: 0;
   }
 
   article {
@@ -229,7 +230,7 @@ header {
       background-color: #99e2d0;
       color: #fff;
       font-size: 28px;
-      padding: 24.5px 30px;
+      padding: 27.5px 30px;
       border-radius: 0 15px 15px 0;
       right: -52px;
       transform: translateX(50px);
@@ -366,7 +367,6 @@ footer {
 
     h2 {
       position: relative;
-      margin-left: 180px;
     }
 
     article {

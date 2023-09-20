@@ -126,6 +126,7 @@ header {
 body {
   display: flex;
   flex-direction: column;
+  margin: 0;
 }
 
 .locate {
@@ -151,7 +152,7 @@ body {
     text-decoration-line: none;
   }
 
-  h1 {
+  h2 {
     font-family: 'Roboto';
     font-size: 40px;
     font-weight: 700;
@@ -274,6 +275,7 @@ h4 {
   flex-direction: column;
   gap: 20px;
   padding-bottom: 60px;
+  margin-right: 10px;
   background-color: var(--main-bg-color);
 
   a {
@@ -350,6 +352,7 @@ h4 {
   flex-direction: column;
   font-size: 18px;
   margin-left: 10px;
+  margin-top: 12px;
 }
 
 img {

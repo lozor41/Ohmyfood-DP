@@ -103,6 +103,7 @@ header h1 {
 body {
   display: flex;
   flex-direction: column;
+  margin: 0;
 }
 
 .locate {
@@ -127,7 +128,7 @@ body {
 .info a {
   text-decoration-line: none;
 }
-.info h1 {
+.info h2 {
   font-family: "Roboto";
   font-size: 40px;
   font-weight: 700;
@@ -235,6 +236,7 @@ h4 {
   flex-direction: column;
   gap: 20px;
   padding-bottom: 60px;
+  margin-right: 10px;
   background-color: var(--main-bg-color);
 }
 .resto a {
@@ -300,6 +302,7 @@ h4 {
   flex-direction: column;
   font-size: 18px;
   margin-left: 10px;
+  margin-top: 12px;
 }
 
 img {
@@ -444,7 +447,7 @@ header h1 i {
   border-radius: 35px 35px 0px 0px;
   background-color: #F6F6F6;
 }
-.menu h1 {
+.menu h2 {
   display: flex;
   align-items: center;
   font-family: "Shrikhand", cursive;
@@ -467,7 +470,7 @@ header h1 i {
     transform: translateX(0);
   }
 }
-.menu .menuform h2 {
+.menu .menuform h3 {
   font-size: 16px;
   font-weight: 300;
   font-family: "Roboto";
@@ -476,13 +479,14 @@ header h1 i {
   width: 40px;
   margin-left: 10px;
 }
-.menu .menuform h3 {
+.menu .menuform h4 {
   display: block;
   font-size: 18px;
   font-weight: 500;
   font-family: "Roboto";
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-left: 0;
 }
 .menu .menuform article {
   font-family: "Roboto";
@@ -600,7 +604,7 @@ header h1 i {
   background-color: #99e2d0;
   color: #fff;
   font-size: 28px;
-  padding: 24.5px 30px;
+  padding: 27.5px 30px;
   border-radius: 0 15px 15px 0;
   right: -52px;
   transform: translateX(50px);
@@ -715,7 +719,6 @@ footer a {
   }
   .menu h2 {
     position: relative;
-    margin-left: 180px;
   }
   .menu article {
     align-self: center;
